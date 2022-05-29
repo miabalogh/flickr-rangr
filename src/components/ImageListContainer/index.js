@@ -55,12 +55,11 @@ const customTheme = {
 
 const ProgressSpinner = (props) => {
     return (
-        <Fragment>
-            <Box sx={{ display: 'flex', mb: 4, mt: 5, alignItems: 'center', justifyContent: 'center' }}>
-                <CircularProgress size='4rem' sx={{ color: customPalette.flickrPink }} />
-            </Box>
+        <Box sx={{ display: 'flex', mb: 4, mt: 5, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            <CircularProgress size='4rem' sx={{ color: customPalette.flickrPink }} />
+            &nbsp;
             <Typography variant="h5" sx={{ fontWeight: '400' }}>Loading images...</Typography>
-        </Fragment>
+        </Box>
     )
 }
 
@@ -95,24 +94,23 @@ const ImageInfo = (props) => {
 }
 
 const NoResults = (props) => {
-    return (<Box sx={{ mt: 6 }}>
-        <div style={{ fontSize: '2em' }}>
-            Hmmmm, we couldn't find any images matching <strong>{props.tagMode}</strong> of
-        </div>
-        <div style={{ fontSize: '1.5em', marginBottom: '2em' }}>
-            <p>{'#' + props.tags.replaceAll(',', ' #')}</p>
-        </div>
-        <div style={{ fontSize: '1.25em' }}>
-            <p>We suggest try a different tag mode or tags combination
-                <br />
-                Discover more at&nbsp; 
-                <Link target={'_blank'} href={`https://www.flickr.com/photos/`}>https://www.flickr.com/photos/</Link>
-            </p>
-        </div>
-
-        {/* <Typography variant='h5'>Hmmmm, we couldn't find any images matching {props.tagMode} of {props.tags}</Typography>
-        <Typography variant='h5' sx={{fontWeight: 'bold'}}>{props.tagMode}</Typography> */}
-    </Box>)
+    return (
+        <Box sx={{ mt: 6, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            <div style={{ fontSize: '2em' }}>
+                Hmmmm, we couldn't find any images matching <strong>{props.tagMode}</strong> of
+            </div>
+            <div style={{ fontSize: '1.5em', marginBottom: '2em' }}>
+                <p>{'#' + props.tags.replaceAll(',', ' #')}</p>
+            </div>
+            <div style={{ fontSize: '1.25em' }}>
+                <p>We suggest try a different tag mode or tags combination
+                    <br />
+                    Discover more at&nbsp;
+                    <Link target={'_blank'} href={`https://www.flickr.com/photos/`}>https://www.flickr.com/photos/</Link>
+                </p>
+            </div>
+        </Box>
+    )
 }
 
 
@@ -179,7 +177,7 @@ class ImageListContainer extends Component {
                         }
                     </MUIImageList>
 
-                    <Box sx={{ backgroundColor: '#00000080', paddingBottom: '0.5em' }}>
+                    <Box sx={{ backgroundColor: '#00000080', paddingBottom: '0.5em', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
                         <Typography variant='caption' sx={{
                             fontSize: '1.25rem',
                             fontStyle: 'italic',
