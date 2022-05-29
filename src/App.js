@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import AppBar from './components/AppBar'
 import ImageListContainer from './containers/ImageListContainer'
 import ScrollToTopFab from 'components/ScrollToTopFab';
