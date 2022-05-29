@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
-import customPalette from '../../constants/customPalette'
+import customPalette from 'constants/customPalette'
 
 const tagModeOptions = [{ label: 'Match All', value: 'all' }, { label: 'Match Any', value: 'any' }]
 

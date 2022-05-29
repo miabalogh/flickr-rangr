@@ -1,4 +1,4 @@
-import { Images } from '../constants/actionTypes'
+import { Images } from 'constants/actionTypes'
 const {
   GET_IMAGES,
   GET_IMAGES_SUCCESS,

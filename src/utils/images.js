@@ -26,8 +26,6 @@ export const formatImagesData = res => {
     e.date_taken = dateTaken === 'N/A' ? dateTaken : dateTaken.toLocaleDateString();
   })
 
-  console.log({items: data, discoverLink: dataRaw.link})
-
   return {items: data, discoverLink: dataRaw.link};
 
 }

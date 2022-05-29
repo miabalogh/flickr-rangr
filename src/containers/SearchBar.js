@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import SearchBar from '../components/SearchBar'
-import { setTags } from '../actions/search'
-import { requestImagesFromFeed } from '../thunks/images'
+import SearchBar from 'components/SearchBar'
+import { setTags } from 'actions/search'
+import { requestImagesFromFeed } from 'thunks/images'
 
 export default connect(
   state => {

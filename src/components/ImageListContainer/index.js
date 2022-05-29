@@ -6,7 +6,7 @@ import { PhotoCamera, Event, Tag, OpenInNew, KeyboardArrowRight } from '@mui/ico
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import globalTheme from 'constants/customTheme';
-import customPalette from '../../constants/customPalette';
+import customPalette from 'constants/customPalette';
 
 const customTheme = {
     components: {

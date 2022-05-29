@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import CreatableSelect from 'react-select/creatable';
 import Box from '@mui/material/Box';
 import TagModeSelectDropDown from 'containers/TagModeSelectDropDown';
-import customPalette from '../../constants/customPalette';
+import customPalette from 'constants/customPalette';
 import Select from 'react-select'
 
 const createOption = (label) => ({

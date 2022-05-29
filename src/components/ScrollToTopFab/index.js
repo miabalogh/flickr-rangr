@@ -3,7 +3,7 @@ import { Zoom, useScrollTrigger, Fab } from "@mui/material";
 import { ConstructionOutlined, KeyboardArrowUp } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles"
 
-import customPalette from '../../constants/customPalette';
+import customPalette from 'constants/customPalette';
 
 const useStyles = makeStyles(theme => ({
   root: {

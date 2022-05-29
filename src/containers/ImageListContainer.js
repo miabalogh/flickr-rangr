@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ImageListContainer from '../components/ImageListContainer'
+import ImageListContainer from 'components/ImageListContainer'
 
 export default connect(
   state => {

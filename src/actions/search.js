@@ -1,4 +1,4 @@
-import { Search } from '../constants/actionTypes';
+import { Search } from 'constants/actionTypes';
 
 const {
     SET_TAGS,

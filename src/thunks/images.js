@@ -9,10 +9,9 @@ export const requestImagesFromFeed = (tags, tagMode) => async (dispatch) => {
         if (tags) {
             feedUrl += `&tags=${tags}&tagmode=${tagMode}` 
         }
-        // const feedUrl = `https://www.flickr.com/services/feeds/photos_public.gne?tags=${tags}&tagmode=${tagMode}&format=json`;
-        console.log(feedUrl)
         const data = await axios.get(feedUrl)
         dispatch(getImagesSuccess(formatImagesData(data)))
+        
     } catch (e) {
         dispatch(getImagesFailure(e))
     }
