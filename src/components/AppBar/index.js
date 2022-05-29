@@ -23,7 +23,7 @@ class AppBar extends Component {
                                 Rangr
                             </Typography>
                             <SearchBar />
-                            <IconButton href={`https://github.com/miabalogh/cv-tricks.com`} target={`_blank`}>
+                            <IconButton href={`https://github.com/miabalogh/flickr-rangr`} target={`_blank`}>
                             <GitHub sx={{color: customPalette.flickrBlue}}/>
                             </IconButton>
                         </Toolbar>
