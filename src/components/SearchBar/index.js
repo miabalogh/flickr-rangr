@@ -3,7 +3,6 @@ import CreatableSelect from 'react-select/creatable';
 import Box from '@mui/material/Box';
 import TagModeSelectDropDown from 'containers/TagModeSelectDropDown';
 import customPalette from 'constants/customPalette';
-import Select from 'react-select'
 
 const createOption = (label) => ({
   label,
@@ -12,7 +11,7 @@ const createOption = (label) => ({
 
 const updateTagsList = (tag, tagsList) => {
   let existingTags = tagsList.map(e => e.label);
-  if (existingTags.indexOf(tag) == -1) {
+  if (existingTags.indexOf(tag) === -1) {
     return [...tagsList, createOption(tag)];
   }
   return tagsList;

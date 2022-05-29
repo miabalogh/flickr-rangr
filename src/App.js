@@ -5,9 +5,6 @@ import ScrollToTopFab from 'components/ScrollToTopFab';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import globalTheme from 'constants/customTheme';
 
-import Select from 'react-select'
-
-
 function App() {
   return (
     <ThemeProvider theme={createTheme(globalTheme)}>

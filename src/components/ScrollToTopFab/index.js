@@ -1,6 +1,6 @@
 import React from "react";
 import { Zoom, useScrollTrigger, Fab } from "@mui/material";
-import { ConstructionOutlined, KeyboardArrowUp } from "@mui/icons-material";
+import { KeyboardArrowUp } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles"
 
 import customPalette from 'constants/customPalette';
