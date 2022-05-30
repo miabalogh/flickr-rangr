@@ -2,6 +2,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+![flickrrangr-screenshot](https://user-images.githubusercontent.com/33166864/170924435-caf2f6f9-7dae-4ae0-937f-282cb2cd5bd2.PNG)
+
 Flickr Rangr (pronounced `Flicker Ranger`) taps in the Flickr public feed API to provide a discovery portal into Flickr's vast collection by "ranging" into the popular platform's publicly accessible feed.
 
 ### Built With
@@ -18,6 +21,7 @@ Flickr image search operates and relies on image tags. Flickr Rangr search engin
 * The Flickr public feed API returns only the most recent 20 images that match the query parameters.
 
 ## Future features & improvements
+
 * Implement a suite of component & flow (E2E) tests using Jest & Enzyme
 * Dark mode & light/dark mode switch button
 * A better way & more interactive way to display image items' tags
