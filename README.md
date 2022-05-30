@@ -20,5 +20,6 @@ Flickr image search operates and relies on image tags. Flickr Rangr search engin
 ## Future features & improvements
 * Implement a suite of component & flow (E2E) tests using Jest & Enzyme
 * Dark mode & light/dark mode switch button
+* A better way & more interactive way to display image items' tags
 * A less hacky way to display tags limit reached message
 * Smoother transition between data fetching & display (in response to current problem of image item bars displaying before the parent image items themselves)
