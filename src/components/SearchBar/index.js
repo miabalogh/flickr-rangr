@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import CreatableSelect from 'react-select/creatable';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 import TagModeSelectDropDown from 'containers/TagModeSelectDropDown';
 import customPalette from 'constants/customPalette';
+import appConstants from 'constants/appConstants';
+
 
 const createOption = (label) => ({
   label,
@@ -26,6 +28,9 @@ class SearchBar extends Component {
 
   handleChange = (value, action) => {
     this.setState({ completedTags: value });
+    if (value.length < appConstants.tagsLimit) {
+      this.props.setTagsLimitReached(false);
+    }
     const newQueryTags = value.map(e => e.label).toString();
     this.props.setTags(newQueryTags);
     this.props.requestImagesFromFeed(newQueryTags, this.props.tagMode);
@@ -40,13 +45,23 @@ class SearchBar extends Component {
       case 'Enter':
       case 'Tab':
         if (this.state.inputVal) {
-          const updatedTagsList = updateTagsList(this.state.inputVal, this.state.completedTags);
-          this.setState({ completedTags: updatedTagsList });
-          this.setState({ inputVal: '' })
-          const newQueryTags = updatedTagsList.map(e => e.label).toString();
-          this.props.setTags(newQueryTags);
-          this.props.requestImagesFromFeed(newQueryTags, this.props.tagMode);
-          event.preventDefault()
+          if (this.state.completedTags.length == appConstants.tagsLimit) {
+            this.props.setTagsLimitReached(true)
+
+          } else if (this.state.completedTags.length < appConstants.tagsLimit) {
+            this.props.setTagsLimitReached(false);
+
+            const updatedTagsList = updateTagsList(this.state.inputVal, this.state.completedTags);
+
+            this.setState({ completedTags: updatedTagsList });
+            this.setState({ inputVal: '' })
+
+            const newQueryTags = updatedTagsList.map(e => e.label).toString();
+            this.props.setTags(newQueryTags);
+            this.props.requestImagesFromFeed(newQueryTags, this.props.tagMode);
+
+            event.preventDefault()
+          }
         }
         break
 

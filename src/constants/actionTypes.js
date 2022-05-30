@@ -8,5 +8,6 @@ export const Images = {
 export const Search = {
   SET_TAGS: 'SET_TAGS',
   SET_TAG_MODE: 'SET_TAG_MODE',
+  SET_TAGS_LIMIT_REACHED: 'SET_TAGS_LIMIT_REACHED'
 }
 
